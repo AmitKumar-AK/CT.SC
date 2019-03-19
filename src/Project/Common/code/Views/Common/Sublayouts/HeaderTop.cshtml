@@ -1,0 +1,16 @@
+﻿@using Sitecore
+@using Sitecore.Mvc
+@model Sitecore.Mvc.Presentation.RenderingModel
+<div class="header-top">
+    <div class="logo">
+        @Html.Sitecore().Placeholder("logo-header-top")
+    </div>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            @Html.Sitecore().Placeholder("left-header-top")
+        </div>
+        <div class="top-bar-right">
+            @Html.Sitecore().Placeholder("right-header-top")
+        </div>
+    </div>
+</div>

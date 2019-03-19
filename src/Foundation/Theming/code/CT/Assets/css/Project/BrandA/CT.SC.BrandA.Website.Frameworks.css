@@ -1,0 +1,36 @@
+/*---------------------------------------------------------
+****************************************************************************
+CT.SC.BrandA.Website.css has been used to serverd as Main style for BrandA website
+*****************************************************************************
+* Version:       0.0.0.1
+* Created By:   Amit Kumar
+* Created Date:   12/26/2018 (MM/DD/YYYY)
+* Modified By:  Amit Kumar
+* Modified Date:   12/26/2018 (MM/DD/YYYY)
+---------------------------------------------------------*/
+
+
+
+body {
+	color: #c0c06a;
+	padding: 0 !important;
+	margin: 0 !important;
+	direction: "ltr";
+	font-size: 14px;
+}
+
+.form-group.form-md-line-input .form-control.edited:not([readonly]) ~ label, .form-group.form-md-line-input .form-control.focus:not([readonly]) ~ label, .form-group.form-md-line-input .form-control:focus:not([readonly]) ~ label, .form-group.form-md-line-input .form-control ~ .help-block-error, .form-group.form-md-line-input .form-control ~ label, .form-horizontal .form-group.form-md-line-input > label {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.form-group.form-md-line-input {
+	position: relative;
+	margin: 0 0 35px;
+	padding-top: 20px;
+}
+
+.form-horizontal .form-group.form-md-line-input {
+	padding-top: 10px;
+	margin: 0 -15px 20px;
+}

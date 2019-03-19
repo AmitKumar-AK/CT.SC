@@ -1,0 +1,22 @@
+﻿@using Sitecore
+@using Sitecore.Mvc
+@using CT.SC.Foundation.SitecoreExtensions.Extensions
+@model Sitecore.Mvc.Presentation.RenderingModel
+<footer class="footer-main">
+    <div class="grid-container footer-inside">
+        <div class="grid-x grid-margin-x">
+            <div class="cell large-8 medium-8 small-12">
+               @Html.Sitecore().Placeholder("left-footer")
+            </div>
+            <div class="cell large-4 medium-4 small-12">
+                @Html.Sitecore().Placeholder("right-footer")
+            </div>
+        </div>
+    </div>
+    <div class="footer-center">
+        @Html.Sitecore().Placeholder("center-footer")
+    </div>
+    <div class="footer-bottom">
+        @Html.Sitecore().Placeholder("postfooter")
+    </div>
+</footer>

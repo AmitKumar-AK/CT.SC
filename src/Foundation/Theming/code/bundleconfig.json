@@ -1,0 +1,49 @@
+﻿[
+  {
+    "outputFileName": "CT/Assets/scripts/Foundation/CT.SC.Foundation.Vendor.js",
+    "inputFiles": [
+      "bower_components/jquery.js",
+      "bower_components/jquery.validate.min.js",
+      "bower_components/jquery.validate.unobtrusive.min.js"
+    ],
+    "sourceMap": true
+  },
+	{
+		"outputFileName": "CT/Assets/css/Foundation/CT.SC.Foundation.Vendor.css",
+		"inputFiles": [
+			"bower_components/foundation/css/foundation.css"
+		],
+		"sourceMap": true
+	},
+	{
+		"outputFileName": "CT/Assets/scripts/Project/Common/CT.SC.Common.Website.Frameworks.js",
+		"inputFiles": [
+			"../../../Project/Common/code/CT/Assets/scripts/Project/Common/CT.SC.Common.Website.Base.js",
+			"../../../Project/Common/code/CT/Assets/scripts/Project/Common/CT.SC.Common.Website.Helper.js"
+		],
+		"sourceMap": true
+	},
+	{
+		"outputFileName": "CT/Assets/css/Project/Common/CT.SC.Common.Website.Frameworks.css",
+			"inputFiles": [
+				"../../../Project/Common/code/CT/Assets/css/Project/Common/CT.SC.Common.Website.css"
+			],
+		"sourceMap": true
+	},
+
+	{
+		"outputFileName": "CT/Assets/scripts/Project/BrandA/CT.SC.BrandA.Website.Framework.js",
+		"inputFiles": [
+			"../../../Project/BrandA/code/CT/Assets/scripts/Project/BrandA/CT.SC.BrandA.Website.Base.js"
+		],
+		"sourceMap": true
+	},
+	{
+		"outputFileName": "CT/Assets/css/Project/BrandA/CT.SC.BrandA.Website.Frameworks.css",
+			"inputFiles": [
+				"../../../Project/BrandA/code/CT/Assets/css/Project/BrandA/CT.SC.BrandA.Website.css"
+			],
+		"sourceMap": true
+	}
+
+]

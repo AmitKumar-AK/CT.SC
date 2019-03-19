@@ -1,0 +1,17 @@
+﻿[
+  {
+    "outputFileName": "CT/Assets/scripts/Feature/CT.SC.Feature.News.js",
+			"inputFiles": [
+				"CT/Assets/scripts/Feature/CT.SC.Feature.News.Base.js"
+			],
+    "sourceMap": true
+  },
+	{
+		"outputFileName": "CT/Assets/css/Feature/CT.SC.Feature.News.css",
+			"inputFiles": [
+				"CT/Assets/css/Feature/CT.SC.Feature.News.Base.css"
+			],
+		"sourceMap": true
+	}
+
+]

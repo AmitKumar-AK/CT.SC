@@ -1,0 +1,37 @@
+/*---------------------------------------------------------
+****************************************************************************
+CT.SC.Common.Website.css has been used to serverd as common style for all websites
+*****************************************************************************
+* Version:       0.0.0.1
+* Created By:   Amit Kumar
+* Created Date:   12/26/2018 (MM/DD/YYYY)
+* Modified By:  Amit Kumar
+* Modified Date:   12/26/2018 (MM/DD/YYYY)
+---------------------------------------------------------*/
+
+a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, td, textarea, th, ul {
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+}
+
+.img-circle {
+	border-radius: 50% !important;
+}
+
+.img-rounded {
+	border-radius: 6px !important;
+}
+
+body {
+	color: #333;
+	padding: 0 !important;
+	margin: 0 !important;
+	direction: "ltr";
+	font-size: 14px;
+}
+
+.bg-divBack {
+	background: gainsboro;
+	color: #333;
+}

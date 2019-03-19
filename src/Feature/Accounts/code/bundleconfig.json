@@ -1,0 +1,17 @@
+﻿[
+  {
+    "outputFileName": "CT/Assets/scripts/Feature/CT.SC.Feature.Account.js",
+    "inputFiles": [
+      "CT/Assets/scripts/Feature/CT.SC.Feature.Account.Base.js"
+    ],
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "CT/Assets/css/Feature/CT.SC.Feature.Account.css",
+    "inputFiles": [
+      "CT/Assets/css/Feature/CT.SC.Feature.Account.Base.css"
+    ],
+    "sourceMap": true
+  }
+
+]
