@@ -4,4 +4,13 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
+<script>
+	function RefreshPage(queryString) {
+		var newUrl = window.location.origin + window.location.pathname + "?key=" + queryString;
+		window.location.href = newUrl;
+      return false;
+    }
+
+</script>
 <p>Use this area to provide additional information.</p>
+<a href="javascript:void(0)" onclick="RefreshPage('@ViewBag.Key')"  class="btn btn-primary btn-lg">Redirect To Current Page &raquo;</a>

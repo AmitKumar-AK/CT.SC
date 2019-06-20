@@ -1,14 +1,18 @@
 ﻿using CT.SC.Foundation.SolrIndexValidation.Models;
+using Ganss.XSS;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Security;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
+using System.Web.Security.AntiXss;
 
 namespace code.Controllers
 {
@@ -68,8 +72,26 @@ namespace code.Controllers
 		public ActionResult About()
 		{
 			ViewBag.Message = "Your application description page.";
+			ViewBag.Key = GetUniqueKey(6);
 
 			return View();
+		}
+
+		public string GetUniqueKey(int size)
+		{
+			char[] chars =
+				"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
+			byte[] data = new byte[size];
+			using (RNGCryptoServiceProvider crypto = new RNGCryptoServiceProvider())
+			{
+				crypto.GetBytes(data);
+			}
+			StringBuilder result = new StringBuilder(size);
+			foreach (byte b in data)
+			{
+				result.Append(chars[b % (chars.Length)]);
+			}
+			return result.ToString();
 		}
 
 		public ActionResult Contact()
@@ -77,6 +99,19 @@ namespace code.Controllers
 			ViewBag.Message = "Your contact page.";
 
 			return View();
+		}
+
+		[HttpPost]
+		[ValidateInput(false)]
+		[ValidateAntiForgeryToken]
+		public ActionResult Search(FormCollection form)
+		{
+			//--If you want to allow tags, then encode it and then decoode it while accessing
+			string userinput = AntiXssEncoder.HtmlEncode(form["search"],false);
+			//--If you want to remove tags
+			var sanitizer = new HtmlSanitizer();
+			var sanitized = sanitizer.Sanitize(form["search"]);
+			return RedirectToAction("Index", "Search", new { userinput = userinput, sanitized= sanitized });
 		}
 	}
 }

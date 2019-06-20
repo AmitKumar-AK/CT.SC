@@ -23,6 +23,15 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+					<li>
+						@using (Html.BeginForm("Search", "Home", FormMethod.Post))
+						{
+							@Html.AntiForgeryToken()
+							//the following are search options
+							<b style="color: #999999;"> Search : </b> @Html.TextBox("search") <input type = "submit" name = "submit" value = "Search" class="btn-primary" / >
+							}
+
+					</li>
                 </ul>
             </div>
         </div>
