@@ -1,4 +1,7 @@
 ﻿@using CT.SC.Foundation.SitecoreExtensions
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc.Extensions
+@using CT.SC.Feature.PageContent
 @model CT.SC.Feature.PageContent.Models.Promo.PromoContentModel
 @{
 	if (Model == null)
@@ -12,10 +15,16 @@
 		<div class="row align-items-center">
 			<div class="col-lg-8 no-padding about-left">
 				<img class="img-fluid" src="@Model.AdvanceImage" alt="">
+				@if (Sitecore.Context.PageMode.IsExperienceEditor)
+				{
+					using (Html.EditFrame(Model.DataSourceItem.ID.ToString(), null, "Edit the Advance Image Content", "Edit the Advance Image Content", "cssClassName", null))
+					{ <p>Edit the Promo Advance Image > Mode > Edit the related item.</p> }
+				}
+
 			</div>
 			<div class="col-lg-4 no-padding about-right">
-				<h1 class="text-white">@Model.PromoText</h1>
-				<p>@Model.PromoText2</p>
+				<h1 class="text-white">@Html.Sitecore().Field("PromoText", Model.DataSourceItem)</h1>
+				<p>@Html.Sitecore().Field("PromoText2", Model.DataSourceItem)</p>
 			</div>
 		</div>
 	</div>
