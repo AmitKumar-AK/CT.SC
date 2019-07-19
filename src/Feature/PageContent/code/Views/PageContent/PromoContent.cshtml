@@ -1,0 +1,22 @@
+﻿@using CT.SC.Foundation.SitecoreExtensions
+@model CT.SC.Feature.PageContent.Models.Promo.PromoContentModel
+@{
+	if (Model == null)
+	{
+		return;
+	}
+}
+
+<section class="home-aboutus-area">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-lg-8 no-padding about-left">
+				<img class="img-fluid" src="@Model.AdvanceImage" alt="">
+			</div>
+			<div class="col-lg-4 no-padding about-right">
+				<h1 class="text-white">@Model.PromoText</h1>
+				<p>@Model.PromoText2</p>
+			</div>
+		</div>
+	</div>
+</section>

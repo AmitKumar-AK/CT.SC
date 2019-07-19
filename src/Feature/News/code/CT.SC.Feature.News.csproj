@@ -119,12 +119,14 @@
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="CT\Assets\css\Feature\CT.SC.Feature.News.Base.css" />
     <Content Include="CT\Assets\scripts\Feature\CT.SC.Feature.News.Base.js" />
+    <Content Include="Views\News\NewsArticle.cshtml" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\web.config" />
@@ -137,9 +139,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Accounts\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

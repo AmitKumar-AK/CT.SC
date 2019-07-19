@@ -3,6 +3,9 @@ using Sitecore;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Resources.Media;
+using Sitecore.Data.Fields;
+using System.Xml;
+using System.Globalization;
 
 namespace CT.SC.Foundation.SitecoreExtensions.Methods
 {
@@ -113,5 +116,53 @@ namespace CT.SC.Foundation.SitecoreExtensions.Methods
             }
         }
 
-    }
+		
+		public static string GetAdvancedImageUrl(ID key, Item item, int height = 100, int width = 100)
+		{
+			string imgUrl = string.Empty;
+			if (item == null)
+				return string.Empty;
+
+			if (!string.IsNullOrEmpty(System.Convert.ToString(item[key])))
+			{
+				Sitecore.Data.Fields.ImageField imageField = ((Sitecore.Data.Fields.ImageField)item.Fields[key]);
+
+				if (string.IsNullOrWhiteSpace(imageField.Value))
+					return string.Empty;
+
+				if (imageField.MediaItem == null)
+					return string.Empty;
+
+				var xml = new XmlDocument();
+				xml.LoadXml(imageField.Value);
+
+				if (xml.DocumentElement == null) return string.Empty;
+
+				var cropx = xml.DocumentElement.HasAttribute("cropx") ? xml.DocumentElement.GetAttribute("cropx") : string.Empty;
+				var cropy = xml.DocumentElement.HasAttribute("cropy") ? xml.DocumentElement.GetAttribute("cropy") : string.Empty;
+				var focusx = xml.DocumentElement.HasAttribute("focusx") ? xml.DocumentElement.GetAttribute("focusx") : string.Empty;
+				var focusy = xml.DocumentElement.HasAttribute("focusy") ? xml.DocumentElement.GetAttribute("focusy") : string.Empty;
+
+				//float.TryParse(cropx, out float cx);
+				//float.TryParse(cropy, out float cy);
+				//float.TryParse(focusx, out float fx);
+				//float.TryParse(focusy, out float fy);
+				float cx,cy,fx,fy;
+			 	System.Single.TryParse(cropx, NumberStyles.Any, CultureInfo.InvariantCulture,out cx);
+				System.Single.TryParse(cropy, NumberStyles.Any, CultureInfo.InvariantCulture, out  cy);
+				System.Single.TryParse(focusx, NumberStyles.Any, CultureInfo.InvariantCulture, out  fx);
+				System.Single.TryParse(focusy, NumberStyles.Any, CultureInfo.InvariantCulture, out  fy);
+
+				var imageSrc = MediaManager.GetMediaUrl(imageField.MediaItem);
+
+				var src = $"{imageSrc}?cx={cx}&amp;cy={cy}&amp;cw={width}&amp;ch={height}";
+
+				var hash = HashingUtils.GetAssetUrlHash(src);
+
+				imgUrl = $"{src}&amp;hash={hash}";
+			}
+			return imgUrl;
+		}
+		
+	}
 }

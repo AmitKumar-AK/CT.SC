@@ -1,0 +1,13 @@
+﻿@using ART.SC.Feature.News
+@using ART.SC.Foundation.Alerts
+@using ART.SC.Foundation.Alerts.Extensions
+@using ART.SC.Foundation.SitecoreExtensions.Extensions
+@model Sitecore.Mvc.Presentation.RenderingModel
+@if (!Model?.Item?.IsDerived(Templates.NewsArticle.ID) ?? true)
+{
+  return;
+}
+
+<div>
+  @Html.Sitecore().Field(Templates.NewsArticle.Fields.Body, Model.Item)
+</div>
