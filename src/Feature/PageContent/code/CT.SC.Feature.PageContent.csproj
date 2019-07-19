@@ -103,6 +103,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Promo_Component_Templates.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
