@@ -9,6 +9,9 @@ The Promo  component used to display the image/text with CTA.
 - _PromoItem
 - Promo
 - PromoFolder
+<img src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Feature/PageContent/code/Promo_Component_Templates.png" data-canonical-src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Feature/PageContent/code/Promo_Component_Templates.png" style="max-width:100%;">
+
+
 
 ### Features include:
 
