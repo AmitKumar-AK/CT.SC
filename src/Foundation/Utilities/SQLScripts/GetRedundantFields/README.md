@@ -42,7 +42,7 @@ For finding the redundant fields in Templates, I have created a SQL Scripts whic
 
 
 # Credit: 
-A big thanks to Saad Ahmed Khan (https://twitter.com/saad_ahmed_khan) for creating the module and Khushboo Sorthiya (https://twitter.com/khush_Sorthiya) to provide details about experience editor improvements
+A would like to thanks Ezhilarasan (https://nl.linkedin.com/in/ezhilarasan-rangan) for pointing how to access the Template fields.
 
 
 
