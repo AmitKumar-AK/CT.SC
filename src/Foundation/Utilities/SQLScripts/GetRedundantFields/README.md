@@ -13,10 +13,32 @@ For finding the redundant fields in Templates, I have created a SQL Scripts whic
 #### File Path: https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/GetRedundantFields.sql
 
 ## Steps to use the SQL Scripts:
-1.	Open the SQL Script with Microsoft SQL Server Management Studio.
-2.	Change the <strong>Master database name</strong> to your Sitecore Website Master name.
-3.	If you wanted to exclude particular templates then mention the GUID of Parent template, e.g. in the SQL script, i wanted to exclude all the templates present under "/sitecore/templates/Foundation/<strong>JavaScript Services</strong>" and for this i mentioned the GUID of <strong>JavaScript Services</strong> folder as 'DFFE04C2-2E82-4879-817C-46018EAFBD61':
+1.	Open the SQL Script with Microsoft SQL Server Management Studio and Change the <strong>Master database name</strong> to your Sitecore Website Master name.
+    <img src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/SSMS.PNG" data-canonical-src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/SSMS.PNG" style="max-width:100%;"/>
 
+2.	If you wanted to exclude particular templates then mention the GUID of Parent template, e.g. in the SQL script, i wanted to exclude all the templates present under "/sitecore/templates/Foundation/<strong>JavaScript Services</strong>" and for this i mentioned the GUID of <strong>JavaScript Services</strong> folder as 'DFFE04C2-2E82-4879-817C-46018EAFBD61':
+    <img src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/ExcludeFields.PNG" data-canonical-src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/ExcludeFields.PNG" style="max-width:100%;"/>
+
+3.	Execute the script and output will be like:
+    <img src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/SQLScript_Output-1.PNG" data-canonical-src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/SQLScript_Output-1.PNG" style="max-width:100%;"/>
+
+4.	Now, we have to filter the records and for this copay & paste all records into Excel sheet:
+    <img src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/PlaceAllOutputinExcelSheet.PNG" data-canonical-src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/PlaceAllOutputinExcelSheet.PNG" style="max-width:100%;"/>
+    
+5.	For better understanding of fields add headings to column items::
+    <img src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/AddFieldTitle.PNG" data-canonical-src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/AddFieldTitle.PNG" style="max-width:100%;"/>
+
+   In the above screen shot, the field items which are having <strong>IsValidField</strong> value as <strong>1</strong> are valid fields  and which are having <strong>IsValidField</strong> value as <strong>0</strong> are not valid fields.
+
+6.	Now apply fitler on Field <strong>IsValidField</strong> as <strong>0</strong> and it will show you all the fields which are redundant:
+    <img src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/ApplyFilterIsValidField.PNG" data-canonical-src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/ApplyFilterIsValidField.PNG" style="max-width:100%;"/>
+
+7.	Select field from <strong>FieldName</strong> and you will get the fields which are redundant:
+    <img src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/ApplyFilteronFieldName.PNG" data-canonical-src="https://github.com/AmitKumar-AK/CT.SC/blob/master/src/Foundation/Utilities/SQLScripts/GetRedundantFields/images/ApplyFilteronFieldName.PNG" style="max-width:100%;"/>
+
+  After getting above report you can group the fields on the basis of Business Domain responsibility or the Use Case of the Feature.
+  
+  I hope this script will be helpful for the <strong>#SitecoreCommunity</strong> to identify the redundant fields on the Templates.
 
 
 # Credit: 
