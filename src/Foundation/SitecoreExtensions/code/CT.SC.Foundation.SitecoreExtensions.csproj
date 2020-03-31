@@ -58,7 +58,9 @@
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\..\ReferenceDLLs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Analytics">
       <HintPath>..\..\ReferenceDLLs\Sitecore.Analytics.dll</HintPath>
       <Private>False</Private>
@@ -71,14 +73,14 @@
       <HintPath>..\..\ReferenceDLLs\Sitecore.Analytics.Model.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\..\3rdPartyDLLs\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\..\ReferenceDLLs\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.LayoutService">
       <HintPath>..\..\ReferenceDLLs\Sitecore.LayoutService.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc">
-      <HintPath>..\..\3rdPartyDLLs\Sitecore.Mvc.dll</HintPath>
+      <HintPath>..\..\ReferenceDLLs\Sitecore.Mvc.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />

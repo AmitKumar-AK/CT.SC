@@ -47,22 +47,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Glass.Mapper">
-      <HintPath>..\..\..\Foundation\ReferenceDLLs\GlassMapper\Glass.Mapper.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Glass.Mapper.Sc">
-      <HintPath>..\..\..\Foundation\ReferenceDLLs\GlassMapper\Glass.Mapper.Sc.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Glass.Mapper.Sc.Mvc">
-      <HintPath>..\..\..\Foundation\ReferenceDLLs\GlassMapper\Glass.Mapper.Sc.Mvc.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Glass.Mapper.Sc.WebForms">
-      <HintPath>..\..\..\Foundation\ReferenceDLLs\GlassMapper\Glass.Mapper.Sc.WebForms.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>False</Private>
@@ -74,15 +58,11 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\..\..\Foundation\3rdPartyDLLs\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\..\..\Foundation\ReferenceDLLs\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Mvc">
-      <HintPath>..\..\..\Foundation\3rdPartyDLLs\Sitecore.Mvc.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sitecore.Mvc.Analytics">
-      <HintPath>..\..\..\Foundation\3rdPartyDLLs\Sitecore.Mvc.Analytics.dll</HintPath>
+      <HintPath>..\..\..\Foundation\ReferenceDLLs\Sitecore.Mvc.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
@@ -162,10 +142,6 @@
     <ProjectReference Include="..\..\..\Foundation\Assets\code\CT.SC.Foundation.Assets.csproj">
       <Project>{2d6c240e-092e-4ae7-93ea-aed27ff26b6e}</Project>
       <Name>CT.SC.Foundation.Assets</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Common\Entities\code\ART.SC.Foundation.Common.Entities.csproj">
-      <Project>{936e9de5-d952-4551-a75f-519aa051fcfe}</Project>
-      <Name>ART.SC.Foundation.Common.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\code\CT.SC.Foundation.SitecoreExtensions.csproj">
       <Project>{88bb9c0e-83d9-4bef-b35e-52bede59c524}</Project>
