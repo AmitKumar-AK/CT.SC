@@ -5,7 +5,8 @@ This is Sitecore Helix based repository and provide information about custom dev
 
 #### Features include:
 
-* Habhitat DI
-* Sample Features
-* Sitecore 9.1 ready
+* Habitat DI
+* Sitecore.NET 10.0.0 (rev. 004346) ready
+* Account Features
+* News Features
 
