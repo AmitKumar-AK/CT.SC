@@ -56,6 +56,30 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{4450B4
 		src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\SSMS.PNG = src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\SSMS.PNG
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{77771234-98EC-48E1-B12E-8FE7010F0BD3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Accounts", "Accounts", "{E75DAF7F-B17A-420C-B407-0CAE6A80A418}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Feature.Accounts", "src\Feature\Accounts\code\CT.SC.Feature.Accounts.csproj", "{A1944CF3-3DD3-4385-B2C4-0C820D5D6415}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "News", "News", "{1C1892E7-C468-432A-A28E-A7DA98ED9D0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Feature.News", "src\Feature\News\code\CT.SC.Feature.News.csproj", "{76FA7C54-B089-424C-9A79-06EA0447D469}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PageContent", "PageContent", "{346F738B-7619-4A8E-9071-8E6ECA19D8F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Feature.PageContent", "src\Feature\PageContent\code\CT.SC.Feature.PageContent.csproj", "{6721EE79-E0E8-4FA0-90A0-A5D629D5E891}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{51D3801F-7565-4C7C-906B-04004B9D340D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{625B8E5C-FB1A-4E68-A5C4-9E2C7BFE0B23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Common.Website", "src\Project\Common\code\CT.SC.Common.Website.csproj", "{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BrandA", "BrandA", "{C4630D6C-9F00-418F-ACD3-A46D4093DFB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.BrandA.Website", "src\Project\BrandA\code\CT.SC.BrandA.Website.csproj", "{F58E834E-E7DD-42CE-98E9-B8B282EA176C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +110,26 @@ Global
 		{2DACAEE7-2C19-44E3-BE2A-5AD8095A5BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DACAEE7-2C19-44E3-BE2A-5AD8095A5BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DACAEE7-2C19-44E3-BE2A-5AD8095A5BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1944CF3-3DD3-4385-B2C4-0C820D5D6415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1944CF3-3DD3-4385-B2C4-0C820D5D6415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1944CF3-3DD3-4385-B2C4-0C820D5D6415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1944CF3-3DD3-4385-B2C4-0C820D5D6415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76FA7C54-B089-424C-9A79-06EA0447D469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76FA7C54-B089-424C-9A79-06EA0447D469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76FA7C54-B089-424C-9A79-06EA0447D469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76FA7C54-B089-424C-9A79-06EA0447D469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6721EE79-E0E8-4FA0-90A0-A5D629D5E891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6721EE79-E0E8-4FA0-90A0-A5D629D5E891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6721EE79-E0E8-4FA0-90A0-A5D629D5E891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6721EE79-E0E8-4FA0-90A0-A5D629D5E891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F58E834E-E7DD-42CE-98E9-B8B282EA176C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F58E834E-E7DD-42CE-98E9-B8B282EA176C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F58E834E-E7DD-42CE-98E9-B8B282EA176C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F58E834E-E7DD-42CE-98E9-B8B282EA176C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,9 +151,19 @@ Global
 		{67D681A7-E4C2-47A3-BA58-158D8699B32D} = {6B112AF2-BBE8-4D07-A5B6-C8897938B62F}
 		{7E5C7134-C566-4166-A2A3-22D5A4E284F4} = {67D681A7-E4C2-47A3-BA58-158D8699B32D}
 		{4450B4E1-777B-4733-B848-93B55A8F9722} = {7E5C7134-C566-4166-A2A3-22D5A4E284F4}
+		{E75DAF7F-B17A-420C-B407-0CAE6A80A418} = {77771234-98EC-48E1-B12E-8FE7010F0BD3}
+		{A1944CF3-3DD3-4385-B2C4-0C820D5D6415} = {E75DAF7F-B17A-420C-B407-0CAE6A80A418}
+		{1C1892E7-C468-432A-A28E-A7DA98ED9D0F} = {77771234-98EC-48E1-B12E-8FE7010F0BD3}
+		{76FA7C54-B089-424C-9A79-06EA0447D469} = {1C1892E7-C468-432A-A28E-A7DA98ED9D0F}
+		{346F738B-7619-4A8E-9071-8E6ECA19D8F6} = {77771234-98EC-48E1-B12E-8FE7010F0BD3}
+		{6721EE79-E0E8-4FA0-90A0-A5D629D5E891} = {346F738B-7619-4A8E-9071-8E6ECA19D8F6}
+		{625B8E5C-FB1A-4E68-A5C4-9E2C7BFE0B23} = {51D3801F-7565-4C7C-906B-04004B9D340D}
+		{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305} = {625B8E5C-FB1A-4E68-A5C4-9E2C7BFE0B23}
+		{C4630D6C-9F00-418F-ACD3-A46D4093DFB4} = {51D3801F-7565-4C7C-906B-04004B9D340D}
+		{F58E834E-E7DD-42CE-98E9-B8B282EA176C} = {C4630D6C-9F00-418F-ACD3-A46D4093DFB4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 		SolutionGuid = {9ED2E8C2-8E06-4612-897A-DE5DF9CDADEA}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal

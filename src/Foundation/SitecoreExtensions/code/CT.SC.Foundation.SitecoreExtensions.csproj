@@ -94,6 +94,7 @@
     <ProjectReference Include="..\..\DependencyInjection\code\CT.SC.Foundation.DependencyInjection.csproj">
       <Project>{6fe6ac9a-a4ac-4926-86a6-8ed0933ae8d8}</Project>
       <Name>CT.SC.Foundation.DependencyInjection</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -112,7 +113,7 @@
     <PackageReference Include="System.Runtime.Extensions" />
     <PackageReference Include="WebGrease" />
     <PackageReference Include="Newtonsoft.Json" />
-  </ItemGroup>  
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="sysglobl" />
     <Reference Include="System" />
@@ -130,9 +131,7 @@
     <Reference Include="System.Threading.Thread" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.Services" />
-  </ItemGroup>  
-  
-  
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

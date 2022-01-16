@@ -50,7 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System" />  </ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\CT.SC.Foundation.Assets.Serialization.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
@@ -90,6 +91,7 @@
     <ProjectReference Include="..\..\SitecoreExtensions\code\CT.SC.Foundation.SitecoreExtensions.csproj">
       <Project>{88bb9c0e-83d9-4bef-b35e-52bede59c524}</Project>
       <Name>CT.SC.Foundation.SitecoreExtensions</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

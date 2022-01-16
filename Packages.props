@@ -10,7 +10,6 @@
     <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" version="2.1.1.0" />
     <PackageReference Update="Sitecore.Kernel" version="$(SitecoreVersion)" />
     <PackageReference Update="System.Text.RegularExpressions" version="4.3.1"  />
-
     <PackageReference Update="JetBrains.Annotations" version="2021.3.0"  />
     <PackageReference Update="Sitecore.Analytics" version="$(SitecoreVersion)" />
     <PackageReference Update="Sitecore.Analytics.Core" version="$(SitecoreVersion)" />
@@ -22,9 +21,7 @@
     <PackageReference Update="System.Reflection" version="4.3.0"  />
     <PackageReference Update="System.Runtime.Extensions" version="4.3.0"  />
     <PackageReference Update="WebGrease" version="1.6.0"  />
-
     <PackageReference Update="BuildBundlerMinifier" version="2.8.391"  />
-
     <PackageReference Update="AngleSharp" version="0.9.9.0" />
     <PackageReference Update="CommonServiceLocator" version="2.0.2" />
     <PackageReference Update="HtmlSanitizer" version="4.0.0.0" />
@@ -35,6 +32,10 @@
     <PackageReference Update="Microsoft.Web.Infrastructure" version="1.0.0.0"  />
     <PackageReference Update="Microsoft.AspNet.WebPages" version="3.2.3"  />
     <PackageReference Update="Microsoft.AspNet.Razor" version="3.2.3"  />
-
+    <PackageReference Update="Sitecore.XConnect" version="$(SitecoreVersion)" />
+    <PackageReference Update="Sitecore.XConnect.Client" version="$(SitecoreVersion)" />
+    <PackageReference Update="Sitecore.XConnect.Client.Configuration" version="$(SitecoreVersion)" />
+    <PackageReference Update="Sitecore.XConnect.Collection.Model" version="$(SitecoreVersion)" />
+    <PackageReference Update="Sitecore.Xdb.Client" version="$(SitecoreVersion)" />
   </ItemGroup>
 </Project>
