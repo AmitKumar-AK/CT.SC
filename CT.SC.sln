@@ -2,90 +2,58 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{97D14E6D-7DEF-4849-BC85-2E9DA03A3723}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{FC4A7FEF-72AF-4D4D-AA15-41E45E51D253}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{F8B5868F-0AE7-4455-9F93-FA73352310A1}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C406B64F-9326-421A-BA84-AD003B298790}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BrandA", "BrandA", "{2CAC39AD-BF70-4A6A-8D85-AA09CB526A64}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReferenceDLLs", "ReferenceDLLs", "{64CB33DF-990E-4B13-B433-44613957CD30}"
-	ProjectSection(SolutionItems) = preProject
-		src\Foundation\3rdPartyDLLs\Microsoft.Extensions.DependencyInjection.Abstractions.dll = src\Foundation\3rdPartyDLLs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-		src\Foundation\3rdPartyDLLs\NetStandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll = src\Foundation\3rdPartyDLLs\NetStandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-		src\Foundation\3rdPartyDLLs\Microsoft.Extensions.DependencyInjection.dll = src\Foundation\3rdPartyDLLs\Microsoft.Extensions.DependencyInjection.dll
-		src\Foundation\3rdPartyDLLs\NetStandard1.1\Microsoft.Extensions.DependencyInjection.dll = src\Foundation\3rdPartyDLLs\NetStandard1.1\Microsoft.Extensions.DependencyInjection.dll
-		src\Foundation\ReferenceDLLs\netstandard.dll = src\Foundation\ReferenceDLLs\netstandard.dll
-		src\Foundation\3rdPartyDLLs\Newtonsoft.Json.dll = src\Foundation\3rdPartyDLLs\Newtonsoft.Json.dll
-		src\Foundation\3rdPartyDLLs\Sitecore.Analytics.Core.dll = src\Foundation\3rdPartyDLLs\Sitecore.Analytics.Core.dll
-		src\Foundation\3rdPartyDLLs\Sitecore.Analytics.dll = src\Foundation\3rdPartyDLLs\Sitecore.Analytics.dll
-		src\Foundation\ReferenceDLLs\Sitecore.Analytics.Model.dll = src\Foundation\ReferenceDLLs\Sitecore.Analytics.Model.dll
-		src\Foundation\3rdPartyDLLs\Sitecore.ContentSearch.dll = src\Foundation\3rdPartyDLLs\Sitecore.ContentSearch.dll
-		src\Foundation\3rdPartyDLLs\Sitecore.ContentSearch.Linq.dll = src\Foundation\3rdPartyDLLs\Sitecore.ContentSearch.Linq.dll
-		src\Foundation\3rdPartyDLLs\Sitecore.ExperienceEditor.dll = src\Foundation\3rdPartyDLLs\Sitecore.ExperienceEditor.dll
-		src\Foundation\3rdPartyDLLs\Sitecore.Foundation.Assets.dll = src\Foundation\3rdPartyDLLs\Sitecore.Foundation.Assets.dll
-		src\Foundation\3rdPartyDLLs\Sitecore.Foundation.Dictionary.dll = src\Foundation\3rdPartyDLLs\Sitecore.Foundation.Dictionary.dll
-		src\Foundation\3rdPartyDLLs\Sitecore.Foundation.SitecoreExtensions.dll = src\Foundation\3rdPartyDLLs\Sitecore.Foundation.SitecoreExtensions.dll
-		src\Foundation\3rdPartyDLLs\Sitecore.Kernel.dll = src\Foundation\3rdPartyDLLs\Sitecore.Kernel.dll
-		src\Foundation\3rdPartyDLLs\Sitecore.Mvc.Analytics.dll = src\Foundation\3rdPartyDLLs\Sitecore.Mvc.Analytics.dll
-		src\Foundation\3rdPartyDLLs\Sitecore.Mvc.dll = src\Foundation\3rdPartyDLLs\Sitecore.Mvc.dll
-		src\Foundation\ReferenceDLLs\Sitecore.XConnect.Client.Configuration.dll = src\Foundation\ReferenceDLLs\Sitecore.XConnect.Client.Configuration.dll
-		src\Foundation\ReferenceDLLs\Sitecore.XConnect.Client.dll = src\Foundation\ReferenceDLLs\Sitecore.XConnect.Client.dll
-		src\Foundation\ReferenceDLLs\Sitecore.XConnect.Collection.Model.dll = src\Foundation\ReferenceDLLs\Sitecore.XConnect.Collection.Model.dll
-		src\Foundation\ReferenceDLLs\Sitecore.XConnect.dll = src\Foundation\ReferenceDLLs\Sitecore.XConnect.dll
-		src\Foundation\ReferenceDLLs\Sitecore.Xdb.Client.dll = src\Foundation\ReferenceDLLs\Sitecore.Xdb.Client.dll
-		src\Foundation\3rdPartyDLLs\System.Runtime.Caching.dll = src\Foundation\3rdPartyDLLs\System.Runtime.Caching.dll
-		src\Foundation\3rdPartyDLLs\System.Web.Mvc.dll = src\Foundation\3rdPartyDLLs\System.Web.Mvc.dll
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{3B2D6B47-BCB4-49D5-AAB1-E1B1CF0631C2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Foundation.Serialization", "src\Foundation\Serialization\code\CT.SC.Foundation.Serialization.csproj", "{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyInjection", "DependencyInjection", "{36FDC393-C1DD-4530-810C-D6C5DE3ABC32}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Foundation.DependencyInjection", "src\Foundation\DependencyInjection\code\CT.SC.Foundation.DependencyInjection.csproj", "{6FE6AC9A-A4AC-4926-86A6-8ED0933AE8D8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecoreExtensions", "SitecoreExtensions", "{74A87AA8-0093-45B7-9752-7BF6B3BC0647}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B90753C3-7770-4226-8F79-178E6A3BFAD8}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.targets = Directory.Build.targets
+		LICENSE.txt = LICENSE.txt
+		Packages.props = Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecoreExtensions", "SitecoreExtensions", "{E3CF8DF6-2E35-4FD9-8B1D-28F4C1605286}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Foundation.SitecoreExtensions", "src\Foundation\SitecoreExtensions\code\CT.SC.Foundation.SitecoreExtensions.csproj", "{88BB9C0E-83D9-4BEF-B35E-52BEDE59C524}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{2BB572E0-547E-41B8-9186-68C66B50095D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{5239E021-C8FD-4DC7-9AEA-121CADE12359}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Foundation.Assets", "src\Foundation\Assets\code\CT.SC.Foundation.Assets.csproj", "{2D6C240E-092E-4AE7-93EA-AED27FF26B6E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Theming", "Theming", "{D17493E8-C772-48B6-95D5-BCE75991B1A0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Theming", "Theming", "{034EDE59-B39B-4C6F-A665-765F179F9003}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Foundation.Theming", "src\Foundation\Theming\code\CT.SC.Foundation.Theming.csproj", "{EA4B472C-4663-4A16-8E4B-A572BECC2D3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Common.Website", "src\Project\Common\code\CT.SC.Common.Website.csproj", "{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{966A0759-960D-4FE8-ABFF-F8515CEBBDD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.BrandA.Website", "src\Project\BrandA\code\CT.SC.BrandA.Website.csproj", "{F58E834E-E7DD-42CE-98E9-B8B282EA176C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Foundation.Serialization", "src\Foundation\Serialization\code\CT.SC.Foundation.Serialization.csproj", "{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Account", "Account", "{1A536093-8AC4-44D0-ADE6-EFE96206E16A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{6B112AF2-BBE8-4D07-A5B6-C8897938B62F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "News", "News", "{C4CF8328-982F-4039-87D1-1BF85DABD75E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Feature.Accounts", "src\Feature\Accounts\code\CT.SC.Feature.Accounts.csproj", "{A1944CF3-3DD3-4385-B2C4-0C820D5D6415}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Feature.News", "src\Feature\News\code\CT.SC.Feature.News.csproj", "{76FA7C54-B089-424C-9A79-06EA0447D469}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{D52D8FB4-900E-4F29-8A56-1C9C8FCA152E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolrIndexValidation", "SolrIndexValidation", "{070CB2A1-5477-4576-AEEB-101ED4B943DA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolrIndexValidation", "SolrIndexValidation", "{6B3018A6-9DA6-4E25-B991-3036B3C6A861}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Foundation.SolrIndexValidation", "src\Foundation\Utilities\SolrIndexValidation\code\CT.SC.Foundation.SolrIndexValidation.csproj", "{2DACAEE7-2C19-44E3-BE2A-5AD8095A5BEA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PageContent", "PageContent", "{97354E12-BF5B-4604-B6F6-4CB2CB217A65}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLScripts", "SQLScripts", "{67D681A7-E4C2-47A3-BA58-158D8699B32D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.SC.Feature.PageContent", "src\Feature\PageContent\code\CT.SC.Feature.PageContent.csproj", "{6721EE79-E0E8-4FA0-90A0-A5D629D5E891}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B90753C3-7770-4226-8F79-178E6A3BFAD8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GetRedundantFields", "GetRedundantFields", "{7E5C7134-C566-4166-A2A3-22D5A4E284F4}"
 	ProjectSection(SolutionItems) = preProject
-		LICENSE.txt = LICENSE.txt
+		src\Foundation\Utilities\SQLScripts\GetRedundantFields\GetRedundantFields.sql = src\Foundation\Utilities\SQLScripts\GetRedundantFields\GetRedundantFields.sql
+		src\Foundation\Utilities\SQLScripts\GetRedundantFields\README.md = src\Foundation\Utilities\SQLScripts\GetRedundantFields\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{4450B4E1-777B-4733-B848-93B55A8F9722}"
+	ProjectSection(SolutionItems) = preProject
+		src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\AddFieldTitle.PNG = src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\AddFieldTitle.PNG
+		src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\ApplyFilterIsValidField.PNG = src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\ApplyFilterIsValidField.PNG
+		src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\ApplyFilteronFieldName.PNG = src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\ApplyFilteronFieldName.PNG
+		src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\ExcludeFields.PNG = src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\ExcludeFields.PNG
+		src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\PlaceAllOutputinExcelSheet.PNG = src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\PlaceAllOutputinExcelSheet.PNG
+		src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\SQLScript_Output-1.PNG = src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\SQLScript_Output-1.PNG
+		src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\SSMS.PNG = src\Foundation\Utilities\SQLScripts\GetRedundantFields\images\SSMS.PNG
 	EndProjectSection
 EndProject
 Global
@@ -94,10 +62,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6FE6AC9A-A4AC-4926-86A6-8ED0933AE8D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6FE6AC9A-A4AC-4926-86A6-8ED0933AE8D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FE6AC9A-A4AC-4926-86A6-8ED0933AE8D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -114,59 +78,35 @@ Global
 		{EA4B472C-4663-4A16-8E4B-A572BECC2D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA4B472C-4663-4A16-8E4B-A572BECC2D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA4B472C-4663-4A16-8E4B-A572BECC2D3F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F58E834E-E7DD-42CE-98E9-B8B282EA176C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F58E834E-E7DD-42CE-98E9-B8B282EA176C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F58E834E-E7DD-42CE-98E9-B8B282EA176C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F58E834E-E7DD-42CE-98E9-B8B282EA176C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A1944CF3-3DD3-4385-B2C4-0C820D5D6415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1944CF3-3DD3-4385-B2C4-0C820D5D6415}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1944CF3-3DD3-4385-B2C4-0C820D5D6415}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1944CF3-3DD3-4385-B2C4-0C820D5D6415}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76FA7C54-B089-424C-9A79-06EA0447D469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76FA7C54-B089-424C-9A79-06EA0447D469}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76FA7C54-B089-424C-9A79-06EA0447D469}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76FA7C54-B089-424C-9A79-06EA0447D469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2DACAEE7-2C19-44E3-BE2A-5AD8095A5BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2DACAEE7-2C19-44E3-BE2A-5AD8095A5BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DACAEE7-2C19-44E3-BE2A-5AD8095A5BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DACAEE7-2C19-44E3-BE2A-5AD8095A5BEA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6721EE79-E0E8-4FA0-90A0-A5D629D5E891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6721EE79-E0E8-4FA0-90A0-A5D629D5E891}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6721EE79-E0E8-4FA0-90A0-A5D629D5E891}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6721EE79-E0E8-4FA0-90A0-A5D629D5E891}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C406B64F-9326-421A-BA84-AD003B298790} = {97D14E6D-7DEF-4849-BC85-2E9DA03A3723}
-		{2CAC39AD-BF70-4A6A-8D85-AA09CB526A64} = {97D14E6D-7DEF-4849-BC85-2E9DA03A3723}
-		{64CB33DF-990E-4B13-B433-44613957CD30} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
-		{3B2D6B47-BCB4-49D5-AAB1-E1B1CF0631C2} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
-		{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104} = {3B2D6B47-BCB4-49D5-AAB1-E1B1CF0631C2}
 		{36FDC393-C1DD-4530-810C-D6C5DE3ABC32} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
 		{6FE6AC9A-A4AC-4926-86A6-8ED0933AE8D8} = {36FDC393-C1DD-4530-810C-D6C5DE3ABC32}
-		{74A87AA8-0093-45B7-9752-7BF6B3BC0647} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
-		{88BB9C0E-83D9-4BEF-B35E-52BEDE59C524} = {74A87AA8-0093-45B7-9752-7BF6B3BC0647}
-		{2BB572E0-547E-41B8-9186-68C66B50095D} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
-		{2D6C240E-092E-4AE7-93EA-AED27FF26B6E} = {2BB572E0-547E-41B8-9186-68C66B50095D}
-		{D17493E8-C772-48B6-95D5-BCE75991B1A0} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
-		{EA4B472C-4663-4A16-8E4B-A572BECC2D3F} = {D17493E8-C772-48B6-95D5-BCE75991B1A0}
-		{9AD44943-5E7F-4CBD-AD4C-4AAAFD1AA305} = {C406B64F-9326-421A-BA84-AD003B298790}
-		{F58E834E-E7DD-42CE-98E9-B8B282EA176C} = {2CAC39AD-BF70-4A6A-8D85-AA09CB526A64}
-		{1A536093-8AC4-44D0-ADE6-EFE96206E16A} = {FC4A7FEF-72AF-4D4D-AA15-41E45E51D253}
-		{C4CF8328-982F-4039-87D1-1BF85DABD75E} = {FC4A7FEF-72AF-4D4D-AA15-41E45E51D253}
-		{A1944CF3-3DD3-4385-B2C4-0C820D5D6415} = {1A536093-8AC4-44D0-ADE6-EFE96206E16A}
-		{76FA7C54-B089-424C-9A79-06EA0447D469} = {C4CF8328-982F-4039-87D1-1BF85DABD75E}
-		{D52D8FB4-900E-4F29-8A56-1C9C8FCA152E} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
-		{070CB2A1-5477-4576-AEEB-101ED4B943DA} = {D52D8FB4-900E-4F29-8A56-1C9C8FCA152E}
-		{2DACAEE7-2C19-44E3-BE2A-5AD8095A5BEA} = {070CB2A1-5477-4576-AEEB-101ED4B943DA}
-		{97354E12-BF5B-4604-B6F6-4CB2CB217A65} = {FC4A7FEF-72AF-4D4D-AA15-41E45E51D253}
-		{6721EE79-E0E8-4FA0-90A0-A5D629D5E891} = {97354E12-BF5B-4604-B6F6-4CB2CB217A65}
+		{E3CF8DF6-2E35-4FD9-8B1D-28F4C1605286} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
+		{88BB9C0E-83D9-4BEF-B35E-52BEDE59C524} = {E3CF8DF6-2E35-4FD9-8B1D-28F4C1605286}
+		{5239E021-C8FD-4DC7-9AEA-121CADE12359} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
+		{2D6C240E-092E-4AE7-93EA-AED27FF26B6E} = {5239E021-C8FD-4DC7-9AEA-121CADE12359}
+		{034EDE59-B39B-4C6F-A665-765F179F9003} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
+		{EA4B472C-4663-4A16-8E4B-A572BECC2D3F} = {034EDE59-B39B-4C6F-A665-765F179F9003}
+		{966A0759-960D-4FE8-ABFF-F8515CEBBDD6} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
+		{DC39FE8A-1A6A-47C8-A0AE-2403C10B7104} = {966A0759-960D-4FE8-ABFF-F8515CEBBDD6}
+		{6B112AF2-BBE8-4D07-A5B6-C8897938B62F} = {F8B5868F-0AE7-4455-9F93-FA73352310A1}
+		{6B3018A6-9DA6-4E25-B991-3036B3C6A861} = {6B112AF2-BBE8-4D07-A5B6-C8897938B62F}
+		{2DACAEE7-2C19-44E3-BE2A-5AD8095A5BEA} = {6B3018A6-9DA6-4E25-B991-3036B3C6A861}
+		{67D681A7-E4C2-47A3-BA58-158D8699B32D} = {6B112AF2-BBE8-4D07-A5B6-C8897938B62F}
+		{7E5C7134-C566-4166-A2A3-22D5A4E284F4} = {67D681A7-E4C2-47A3-BA58-158D8699B32D}
+		{4450B4E1-777B-4733-B848-93B55A8F9722} = {7E5C7134-C566-4166-A2A3-22D5A4E284F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
