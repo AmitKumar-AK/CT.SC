@@ -5,6 +5,7 @@
     using Sitecore.Resources.Media;
     using Sitecore.Xml;
     using Sitecore;
+    using JetBrains.Annotations;
 
     public static class RenderingExtensions
     {

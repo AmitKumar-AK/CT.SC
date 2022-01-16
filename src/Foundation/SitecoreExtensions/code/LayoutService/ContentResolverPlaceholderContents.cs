@@ -48,10 +48,10 @@ namespace CT.SC.Foundation.SitecoreExtensions.LayoutService.ItemRendering.Conten
 			this.ServiceContext = serviceContext;
 		}
 
-		protected override JObject ProcessItem(Item item, IRenderingConfiguration renderingConfig)
+		protected override JObject ProcessItem(Item item, Rendering rendering, IRenderingConfiguration renderingConfig)
 		{
 
-			var jObject = base.ProcessItem(item, renderingConfig);
+			var jObject = base.ProcessItem(item, rendering, renderingConfig);
 
 			if (item.Children.Count == 0)
 			{
@@ -82,7 +82,7 @@ namespace CT.SC.Foundation.SitecoreExtensions.LayoutService.ItemRendering.Conten
 			//homeItem.Axes.GetDescendants().Where(x => (x.TemplateID.ToString().Equals(yourId1) || x.TemplateID.ToString().Equals(yourId2));
 
 
-			jObject["items"] = ProcessItems(item.Children, renderingConfig);
+			jObject["items"] = ProcessItems(item.Children, rendering, renderingConfig);
 
 			return jObject;
 		}
