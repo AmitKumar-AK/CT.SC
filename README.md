@@ -5,6 +5,7 @@
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/amitkumar-ak/CT.SC.svg)](https://GitHub.com/amitkumar-ak/CT.SC/pulls/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub Stars](https://img.shields.io/github/stars/amitkumar-ak/CT.SC?label=GitHub%20Stars)](https://github.com/amitkumar-ak/CT.SC/stargazers)
+[![Visits Badge](https://badges.pufler.dev/visits/AmitKumar-AK/CT.SC)](https://badges.pufler.dev)
 
 [![GitHub watchers](https://img.shields.io/github/watchers/amitkumar-ak/CT.SC.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/amitkumar-ak/CT.SC/watchers/)
 [![GitHub forks](https://img.shields.io/github/forks/amitkumar-ak/CT.SC.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/amitkumar-ak/CT.SC/network/)
