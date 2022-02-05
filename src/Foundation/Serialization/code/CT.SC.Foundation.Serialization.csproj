@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\web.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config.disabled" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
