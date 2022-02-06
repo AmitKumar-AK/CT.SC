@@ -17,7 +17,7 @@ This is Sitecore Helix based repository and provide information about custom dev
 
 #### Features include:
 
-* Sitecore.NET 10.0.0 (rev. 004346) ready
+* [Sitecore XP 10.0.0 (rev. 004346)](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100.aspx) ready
 * Use of [PackageReference](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) in solution
 * Use of [Microsoft.Build.CentralPackageVersions](https://github.com/microsoft/MSBuildSdks/tree/main/src/CentralPackageVersions)
 * Account Features
