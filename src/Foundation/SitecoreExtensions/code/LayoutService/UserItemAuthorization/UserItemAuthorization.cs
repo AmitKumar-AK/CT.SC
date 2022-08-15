@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace CT.SC.Foundation.SitecoreExtensions.Pipelines
+namespace CT.SC.Foundation.SitecoreExtensions.LayoutService.LayoutServiceContext
 {
     public class UserItemAuthorization : JssGetLayoutServiceContextProcessor
     {
