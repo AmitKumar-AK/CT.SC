@@ -45,9 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\CT.SC.Foundation.SitecoreExtensions.Serialization.config" />
-    <Content Include="App_Config\Include\Foundation\CT.SC.Foundation.SitecoreExtensions.Client.BranchPresets.config" />
-    <None Include="packages.config.disabled" />
+    <Content Include="App_Config\Include\Foundation\zz.CT.SC.Foundation.SitecoreExtensions.Serialization.config" />
+    <Content Include="App_Config\Include\Foundation\zz.CT.SC.Foundation.SitecoreExtensions.Client.BranchPresets.config" />
+    <Content Include="App_Config\Include\Foundation\zz.CT.SC.Foundation.SitecoreExtensions.UserItemAuthorization.config" />
+    <Content Include="README.md" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -69,15 +70,17 @@
     <Compile Include="LayoutService\ContentResolverPlaceholderContents.cs" />
     <Compile Include="LayoutService\CustomResolverRelatedContents.cs" />
     <Compile Include="Methods\Utilities.cs" />
+    <Compile Include="Pipelines\UserItemAuthorization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IDictionaryPhraseRepository.cs" />
     <Compile Include="Rules\CheckUserPersonaStringCondition.cs" />
     <Compile Include="Rules\CheckUserPersonaStringNotNull.cs" />
+    <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\web.config" />
-    <Content Include="App_Config\Include\Foundation\CT.SC.Foundation.SitecoreExtensions.config" />
-    <Content Include="App_Config\Include\Foundation\CT.SC.Foundation.SitecoreExtensions.PerformanceTweaks.config" />
+    <Content Include="App_Config\Include\Foundation\zz.CT.SC.Foundation.SitecoreExtensions.config" />
+    <Content Include="App_Config\Include\Foundation\zz.CT.SC.Foundation.SitecoreExtensions.PerformanceTweaks.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -102,6 +105,7 @@
     <PackageReference Include="JetBrains.Annotations" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Sitecore.JavaScriptServices.ViewEngine" />
     <PackageReference Include="Sitecore.Kernel" />
     <PackageReference Include="Sitecore.Analytics" />
     <PackageReference Include="Sitecore.Analytics.Core" />

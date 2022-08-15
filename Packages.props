@@ -3,6 +3,7 @@
   <PropertyGroup>
     <SitecoreVersion>10.0.0</SitecoreVersion>
     <SitecorePreVersion>10.0.0</SitecorePreVersion>
+	<SitecoreLayoutServiceVersion>15.0.0</SitecoreLayoutServiceVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Update="Microsoft.AspNet.Mvc" version="5.2.4" />
@@ -37,5 +38,6 @@
     <PackageReference Update="Sitecore.XConnect.Client.Configuration" version="$(SitecoreVersion)" />
     <PackageReference Update="Sitecore.XConnect.Collection.Model" version="$(SitecoreVersion)" />
     <PackageReference Update="Sitecore.Xdb.Client" version="$(SitecoreVersion)" />
+	<PackageReference Update="Sitecore.JavaScriptServices.ViewEngine" version="$(SitecoreLayoutServiceVersion)" />	  
   </ItemGroup>
 </Project>
