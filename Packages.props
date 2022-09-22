@@ -38,10 +38,6 @@
     <PackageReference Update="Sitecore.XConnect.Client.Configuration" version="$(SitecoreVersion)" />
     <PackageReference Update="Sitecore.XConnect.Collection.Model" version="$(SitecoreVersion)" />
     <PackageReference Update="Sitecore.Xdb.Client" version="$(SitecoreVersion)" />
-	<PackageReference Update="Sitecore.JavaScriptServices.ViewEngine" version="$(SitecoreLayoutServiceVersion)" />
-    <PackageReference Update="Sitecore.XConnect" Version="$(SitecoreVersion)" />
-    <PackageReference Update="Sitecore.Assemblies.Platform" Version="$(SitecoreVersion)" />
-    <PackageReference Update="Sitecore.Assemblies.XConnect.Web" Version="$(SitecoreVersion)" />
-	
+	<PackageReference Update="Sitecore.JavaScriptServices.ViewEngine" version="$(SitecoreLayoutServiceVersion)" />	  
   </ItemGroup>
 </Project>
