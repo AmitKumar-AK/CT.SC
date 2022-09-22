@@ -74,6 +74,7 @@
   <ItemGroup>
     <Content Include="CT\Assets\css\Project\BrandA\CT.SC.BrandA.Website.css" />
     <Content Include="CT\Assets\scripts\Project\BrandA\CT.SC.BrandA.Website.Base.js" />
+    <Content Include="App_Config\Include\Project\zzz\zzz.CTContactModel.config" />
     <None Include="packages.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -99,6 +100,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Environment\xconnect\Model\code\CT.Environment.XConnect.Model.csproj">
+      <Project>{16dc2062-e853-44bb-a006-bc1f4cd5bbcf}</Project>
+      <Name>CT.Environment.XConnect.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Assets\code\CT.SC.Foundation.Assets.csproj">
       <Project>{2d6c240e-092e-4ae7-93ea-aed27ff26b6e}</Project>
       <Name>CT.SC.Foundation.Assets</Name>

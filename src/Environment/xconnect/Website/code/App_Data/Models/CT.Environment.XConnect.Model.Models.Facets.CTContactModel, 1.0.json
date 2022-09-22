@@ -1,0 +1,88 @@
+{
+  "Name": "CT.Environment.XConnect.Model.Models.Facets.CTContactModel",
+  "Version": "1.0",
+  "References": [
+    {
+      "Name": "XConnect",
+      "Version": "1.0"
+    },
+    {
+      "Name": "Sitecore.XConnect.Collection.Model",
+      "Version": "10.0"
+    }
+  ],
+  "Types": {
+    "CT.Environment.XConnect.Model.Models.Facets.EmployerFacet": {
+      "Type": "Facet",
+      "BaseType": "Sitecore.XConnect.Facet",
+      "ClrType": "CT.Environment.XConnect.Model.Models.Facets.EmployerFacet, CT.Environment.XConnect.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {
+        "SubTitle": {
+          "Type": "String"
+        },
+        "Company": {
+          "Type": "String"
+        },
+        "Consent": {
+          "Type": "Boolean"
+        },
+        "PreferredOfficeLocation": {
+          "Type": "String"
+        }
+      }
+    },
+    "CT.Environment.XConnect.Model.Models.Facets.PreferenceFacet": {
+      "Type": "Facet",
+      "BaseType": "Sitecore.XConnect.Facet",
+      "ClrType": "CT.Environment.XConnect.Model.Models.Facets.PreferenceFacet, CT.Environment.XConnect.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {
+        "CommunicationPreferences": {
+          "Type": [
+            "CT.Environment.XConnect.Model.Models.Preference.Communication"
+          ]
+        },
+        "AreaOfInterestPreferences": {
+          "Type": [
+            "CT.Environment.XConnect.Model.Models.Preference.AreaOfInterest"
+          ]
+        }
+      }
+    },
+    "CT.Environment.XConnect.Model.Models.Preference.Communication": {
+      "Type": "Complex",
+      "ClrType": "CT.Environment.XConnect.Model.Models.Preference.Communication, CT.Environment.XConnect.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {
+        "CommunicationId": {
+          "Type": "String"
+        },
+        "CommunicationName": {
+          "Type": "String"
+        }
+      }
+    },
+    "CT.Environment.XConnect.Model.Models.Preference.AreaOfInterest": {
+      "Type": "Complex",
+      "ClrType": "CT.Environment.XConnect.Model.Models.Preference.AreaOfInterest, CT.Environment.XConnect.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {
+        "AreaOfInterestId": {
+          "Type": "String"
+        },
+        "AreaOfInterestName": {
+          "Type": "String"
+        }
+      }
+    }
+  },
+  "Facets": [
+    {
+      "Target": "Contact",
+      "Name": "EmployerFacet",
+      "Type": "CT.Environment.XConnect.Model.Models.Facets.EmployerFacet"
+    },
+    {
+      "Target": "Contact",
+      "Name": "PreferenceFacet",
+      "Type": "CT.Environment.XConnect.Model.Models.Facets.PreferenceFacet"
+    }
+  ]
+}

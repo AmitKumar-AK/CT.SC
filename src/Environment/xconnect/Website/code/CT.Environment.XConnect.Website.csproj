@@ -6,12 +6,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{16DC2062-E853-44BB-A006-BC1F4CD5BBCF}</ProjectGuid>
+    <ProjectGuid>{5A9AB6CC-9800-4725-9967-16A58123D394}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CT.Environment.XConnect.Model</RootNamespace>
-    <AssemblyName>CT.Environment.XConnect.Model</AssemblyName>
+    <RootNamespace>CT.Environment.XConnect.Website</RootNamespace>
+    <AssemblyName>CT.Environment.XConnect.Website</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -46,31 +46,25 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Sitecore.Assemblies.Platform">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <Content Include="App_Data\Config\Sitecore\MarketingAutomation\sc.xConnect.CTContactModel.xml" />
+    <Content Include="App_Data\Models\CT.Environment.XConnect.Model.Models.Facets.CTContactModel, 1.0.json" />
+    <None Include="Properties\PublishProfiles\DockerDeploy.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\code\CT.Environment.XConnect.Model.csproj">
+      <Project>{16dc2062-e853-44bb-a006-bc1f4cd5bbcf}</Project>
+      <Name>CT.Environment.XConnect.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Sitecore.Assemblies.XConnect.Web">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Sitecore.XConnect" />
-    <PackageReference Include="Sitecore.XConnect.Collection.Model" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Models\Facets\EmployerFacet.cs" />
-    <Compile Include="Models\Facets\CTContactModel.cs" />
-    <Compile Include="Models\Facets\PreferenceFacet.cs" />
-    <Compile Include="Models\Preference\AreaOfInterest.cs" />
-    <Compile Include="Models\Preference\Communication.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -84,9 +78,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52239</DevelopmentServerPort>
+          <DevelopmentServerPort>56307</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52239/</IISUrl>
+          <IISUrl>http://localhost:56307/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
