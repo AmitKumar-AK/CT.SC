@@ -10,5 +10,9 @@ We have used the following articles for this:
 
 The following Visual Studio Solutions being used:
 - [Serialize the custom xConnect model](../../ModelBuilder/code)
+- [Sitecore xConnect Role](../../Website/code/)
 - [Sitecore CM Role](../../../cm/Website/code)
 - [Sitecore CD Role](../../../../Project/BrandA/code)
+- [Use of Sitecore xConnect custom model](../../../../Feature/Accounts/code/)
+
+> ### The above solutions should be used to deploy the required artifacts to specific Sitecore Roles as per [Understand xConnect model deployment](https://doc.sitecore.com/xp/en/developers/101/developer-tools/including-a-custom-xconnect-model.html#understand-xconnect-model-deployment_body)
