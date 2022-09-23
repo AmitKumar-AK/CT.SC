@@ -12,6 +12,3 @@ The following Visual Studio Solutions being used:
 - [Serialize the custom xConnect model](../../ModelBuilder/code)
 - [Sitecore CM Role](../../../cm/Website/code)
 - [Sitecore CD Role](../../../../Project/BrandA/code)
-
-
-Go to Root of the Solution [<<](../../../../../../CT.SC/)
