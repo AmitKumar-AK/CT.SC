@@ -1,4 +1,5 @@
 ﻿using CT.Environment.XConnect.Model.Models.Facets;
+using CT.Environment.XConnect.Model.Models.Preference;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore;
 using Sitecore.Analytics;
@@ -30,7 +31,7 @@ namespace CT.SC.Feature.Accounts.Controllers
         }
 
 		public JsonResult VirtualUserLogin(string email, string fName, string lName, string personaName, string subTitle, 
-			string company, bool userConsent, string preferredOfficeLocation, string jobTitle)
+			string company, bool userConsent, string preferredOfficeLocation, string jobTitle, List<AreaOfInterest> areaOfInterests, List<Communication> communications)
 		{
 			var virtualUser = (User)null;
 			var domainName = "extranet";
@@ -53,7 +54,7 @@ namespace CT.SC.Feature.Accounts.Controllers
 			{
 				//Tracker.Current.Session.IdentifyAs("IdentifiedEmail", email);
 				TrackNewContact(fName, lName, email, personaName, subTitle,
-			 company,  userConsent, preferredOfficeLocation, jobTitle);
+			 company,  userConsent, preferredOfficeLocation, jobTitle, areaOfInterests, communications);
 			}
 			//--Create Contact-::End------//
 
@@ -79,7 +80,8 @@ namespace CT.SC.Feature.Accounts.Controllers
 
 
 		public string TrackNewContact(string firstName, string lastName, string emailAddress, string personaName, string subTitle,
-			string company, bool userConsent, string preferredOfficeLocation, string jobTitle)
+			string company, bool userConsent, string preferredOfficeLocation, string jobTitle, 
+			List<AreaOfInterest> areaOfInterests, List<Communication> communications)
 		{
 			string contactGuid = string.Empty;
 			using (var client = CreateClient())
@@ -138,6 +140,13 @@ namespace CT.SC.Feature.Accounts.Controllers
 					};
 					FacetReference employerFacetReference = new FacetReference(contact, EmployerFacet.DefaultFacetKey);
 					client.SetFacet(employerFacetReference, employerInformation);
+
+					PreferenceFacet preferences = new PreferenceFacet()
+					{
+						AreaOfInterestPreferences = areaOfInterests,
+						CommunicationPreferences = communications
+					};
+					client.SetFacet(contact, PreferenceFacet.DefaultFacetKey, preferences);
 
 					BoostUserPattern(Tracker.Current.Session, personaName);
 
@@ -294,7 +303,8 @@ namespace CT.SC.Feature.Accounts.Controllers
 		}
 
 		public void UpdateContactData(string firstName, string lastName, string emailAddress, string subTitle,
-			string company, bool userConsent, string preferredOfficeLocation, string jobTitle)
+			string company, bool userConsent, string preferredOfficeLocation, string jobTitle,
+			List<AreaOfInterest> areaOfInterests, List<Communication> communications)
 		{
 
 			using (XConnectClient client = SitecoreXConnectClientConfiguration.GetClient())
@@ -302,7 +312,7 @@ namespace CT.SC.Feature.Accounts.Controllers
 				try
 				{
 					var reference = new IdentifiedContactReference("IdentifiedEmail", emailAddress.ToLower());
-					var expandOptions = new ContactExpandOptions(PersonalInformation.DefaultFacetKey, EmployerFacet.DefaultFacetKey);
+					var expandOptions = new ContactExpandOptions(PersonalInformation.DefaultFacetKey, EmployerFacet.DefaultFacetKey, PreferenceFacet.DefaultFacetKey);
 					var contactExecutionOptions = new ContactExecutionOptions(expandOptions);
 					var contact = client.Get(reference,	new ContactExecutionOptions(expandOptions));
 
@@ -323,7 +333,6 @@ namespace CT.SC.Feature.Accounts.Controllers
 					}
 
 					var employerInformation = contact.GetFacet<EmployerFacet>(EmployerFacet.DefaultFacetKey);
-
 					if (employerInformation != null)
 					{
 						employerInformation.SubTitle = subTitle;
@@ -333,6 +342,24 @@ namespace CT.SC.Feature.Accounts.Controllers
 
 						client.SetFacet<EmployerFacet>(contact, EmployerFacet.DefaultFacetKey, employerInformation);
 					}
+
+					var preferencesData = contact.GetFacet<PreferenceFacet>(PreferenceFacet.DefaultFacetKey);
+					if (employerInformation != null)
+					{
+						preferencesData.AreaOfInterestPreferences = areaOfInterests;
+						preferencesData.CommunicationPreferences = communications;
+
+						client.SetFacet<PreferenceFacet>(contact, PreferenceFacet.DefaultFacetKey, preferencesData);
+					}
+					else
+					{
+						client.SetFacet<PreferenceFacet>(contact, PreferenceFacet.DefaultFacetKey, new PreferenceFacet()
+						{
+							AreaOfInterestPreferences = areaOfInterests,
+							CommunicationPreferences = communications
+						});
+					}
+
 					client.Submit();
 				}
 				catch (XdbExecutionException ex)
