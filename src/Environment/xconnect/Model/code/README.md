@@ -14,4 +14,4 @@ The following Visual Studio Solutions being used:
 - [Sitecore CD Role](../../../../Project/BrandA/code)
 
 
-Go to Root of the Solution [<<](../../../../../)
+Go to Root of the Solution [<<](../../../../../../CT.SC/)
