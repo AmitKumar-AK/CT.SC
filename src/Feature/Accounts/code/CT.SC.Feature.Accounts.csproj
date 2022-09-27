@@ -107,6 +107,12 @@
   <ItemGroup>
     <Folder Include="Views\Accounts\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Environment\xconnect\Model\code\CT.Environment.XConnect.Model.csproj">
+      <Project>{16DC2062-E853-44BB-A006-BC1F4CD5BBCF}</Project>
+      <Name>CT.Environment.XConnect.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

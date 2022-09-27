@@ -1,4 +1,7 @@
-﻿using Sitecore;
+﻿using CT.Environment.XConnect.Model.Models.Facets;
+using CT.Environment.XConnect.Model.Models.Preference;
+using Microsoft.Extensions.DependencyInjection;
+using Sitecore;
 using Sitecore.Analytics;
 using Sitecore.Analytics.Data;
 using Sitecore.Analytics.Tracking;
@@ -27,7 +30,8 @@ namespace CT.SC.Feature.Accounts.Controllers
             return View();
         }
 
-		public JsonResult VirtualUserLogin(string email, string fName, string lName, string personaName)
+		public JsonResult VirtualUserLogin(string email, string fName, string lName, string personaName, string subTitle, 
+			string company, bool userConsent, string preferredOfficeLocation, string jobTitle, List<AreaOfInterest> areaOfInterests, List<Communication> communications)
 		{
 			var virtualUser = (User)null;
 			var domainName = "extranet";
@@ -49,12 +53,12 @@ namespace CT.SC.Feature.Accounts.Controllers
 			if (!string.IsNullOrEmpty(email))
 			{
 				//Tracker.Current.Session.IdentifyAs("IdentifiedEmail", email);
-				TrackNewContact(fName, lName, email, personaName);
+				TrackNewContact(fName, lName, email, personaName, subTitle,
+			 company,  userConsent, preferredOfficeLocation, jobTitle, areaOfInterests, communications);
 			}
 			//--Create Contact-::End------//
 
 			return Json(true, JsonRequestBehavior.AllowGet);
-
 		}
 
 
@@ -75,7 +79,9 @@ namespace CT.SC.Feature.Accounts.Controllers
 		}
 
 
-		public string TrackNewContact(string firstName, string lastName, string emailAddress, string personaName)
+		public string TrackNewContact(string firstName, string lastName, string emailAddress, string personaName, string subTitle,
+			string company, bool userConsent, string preferredOfficeLocation, string jobTitle, 
+			List<AreaOfInterest> areaOfInterests, List<Communication> communications)
 		{
 			string contactGuid = string.Empty;
 			using (var client = CreateClient())
@@ -84,23 +90,67 @@ namespace CT.SC.Feature.Accounts.Controllers
 				{
 					ITracker CurrentTracker = Tracker.Current;
 
-					var emailIdent = new IdentifiedContactReference("IdentifiedEmail", emailAddress);
+					var emailIdent = new IdentifiedContactReference("IdentifiedEmail", emailAddress.ToLower());
 
 					//Identify with Email
-					CurrentTracker.Session.IdentifyAs(emailIdent.Source, emailIdent.Identifier);
+					var identificationManager = Sitecore.DependencyInjection.ServiceLocator.ServiceProvider.GetRequiredService<Sitecore.Analytics.Tracking.Identification.IContactIdentificationManager>();
+					Sitecore.Analytics.Tracking.Identification.IdentificationResult result = identificationManager.IdentifyAs(new Sitecore.Analytics.Tracking.Identification.KnownContactIdentifier(emailIdent.Source, emailIdent.Identifier));
+
+					if (!result.Success)
+					{
+						//check result.ErrorCode and result.ErrorMessage for more details
+					}
+
 
 					var expandOptions = new ContactExpandOptions(
 						CollectionModel.FacetKeys.PersonalInformation,
 						CollectionModel.FacetKeys.EmailAddressList);
-					var contact = client.Get(emailIdent, expandOptions);
-					contactGuid = contact.Id.HasValue ? contact.Id.Value.ToString() : string.Empty;
+					var reference = new IdentifiedContactReference(emailIdent.Source, emailIdent.Identifier);
+                    Sitecore.XConnect.Contact contact = null;
+					try
+					{
+						contact = client.Get(reference,
+							new ContactExecutionOptions(expandOptions));
+					}
+					catch (Exception ex)
+					{
+						Log.Error("TrackNewContact :: Contact not found in Sitecore xConnect for user " + emailAddress.ToLower() + "::Error:" + ex.Message, this);
+					}
 
-					//Set Fields
-					SetPersonalInformation(firstName, lastName, contact, client, personaName,Tracker.Current.Session);
-					SetEmail(emailAddress, contact, client);
+
+					PersonalInformation personalFacet = new PersonalInformation()
+					{
+						FirstName = firstName,
+						LastName = lastName,
+						JobTitle = jobTitle
+					};
+
+					FacetReference facetReference = new FacetReference(contact, PersonalInformation.DefaultFacetKey);
+					client.SetFacet(facetReference, personalFacet);
+
+					EmailAddressList emails = new EmailAddressList(new EmailAddress(emailAddress.ToLower(), true), "E-Mail");
+					client.SetFacet(contact, emails);
+
+					EmployerFacet employerInformation = new EmployerFacet()
+					{
+						SubTitle = subTitle,
+						Company = company,
+						Consent = userConsent,
+						PreferredOfficeLocation = preferredOfficeLocation
+					};
+					FacetReference employerFacetReference = new FacetReference(contact, EmployerFacet.DefaultFacetKey);
+					client.SetFacet(employerFacetReference, employerInformation);
+
+					PreferenceFacet preferences = new PreferenceFacet()
+					{
+						AreaOfInterestPreferences = areaOfInterests,
+						CommunicationPreferences = communications
+					};
+					client.SetFacet(contact, PreferenceFacet.DefaultFacetKey, preferences);
+
+					BoostUserPattern(Tracker.Current.Session, personaName);
 
 					client.Submit();
-
 				}
 				catch (Exception ex)
 				{
@@ -252,6 +302,73 @@ namespace CT.SC.Feature.Accounts.Controllers
 			return false;
 		}
 
+		public void UpdateContactData(string firstName, string lastName, string emailAddress, string subTitle,
+			string company, bool userConsent, string preferredOfficeLocation, string jobTitle,
+			List<AreaOfInterest> areaOfInterests, List<Communication> communications)
+		{
+
+			using (XConnectClient client = SitecoreXConnectClientConfiguration.GetClient())
+			{
+				try
+				{
+					var reference = new IdentifiedContactReference("IdentifiedEmail", emailAddress.ToLower());
+					var expandOptions = new ContactExpandOptions(PersonalInformation.DefaultFacetKey, EmployerFacet.DefaultFacetKey, PreferenceFacet.DefaultFacetKey);
+					var contactExecutionOptions = new ContactExecutionOptions(expandOptions);
+					var contact = client.Get(reference,	new ContactExecutionOptions(expandOptions));
+
+					if (contact == null)
+					{
+						Log.Error("UpdateContactData :: Contact not found in Sitecore xConnect for user " + emailAddress.ToLower(), this);
+						return;
+					}
+
+					var personalInformationFacet = contact.GetFacet<PersonalInformation>(PersonalInformation.DefaultFacetKey);
+					if (personalInformationFacet != null)
+					{
+						personalInformationFacet.FirstName = firstName;
+						personalInformationFacet.LastName = lastName;
+						personalInformationFacet.JobTitle = jobTitle;
+
+						client.SetFacet<PersonalInformation>(contact, PersonalInformation.DefaultFacetKey, personalInformationFacet);
+					}
+
+					var employerInformation = contact.GetFacet<EmployerFacet>(EmployerFacet.DefaultFacetKey);
+					if (employerInformation != null)
+					{
+						employerInformation.SubTitle = subTitle;
+						employerInformation.Company = company;
+						employerInformation.Consent = userConsent;
+						employerInformation.PreferredOfficeLocation = preferredOfficeLocation;
+
+						client.SetFacet<EmployerFacet>(contact, EmployerFacet.DefaultFacetKey, employerInformation);
+					}
+
+					var preferencesData = contact.GetFacet<PreferenceFacet>(PreferenceFacet.DefaultFacetKey);
+					if (employerInformation != null)
+					{
+						preferencesData.AreaOfInterestPreferences = areaOfInterests;
+						preferencesData.CommunicationPreferences = communications;
+
+						client.SetFacet<PreferenceFacet>(contact, PreferenceFacet.DefaultFacetKey, preferencesData);
+					}
+					else
+					{
+						client.SetFacet<PreferenceFacet>(contact, PreferenceFacet.DefaultFacetKey, new PreferenceFacet()
+						{
+							AreaOfInterestPreferences = areaOfInterests,
+							CommunicationPreferences = communications
+						});
+					}
+
+					client.Submit();
+				}
+				catch (XdbExecutionException ex)
+				{
+					Log.Error("Error retrieving contact facet.", ex, this);
+					return;
+				}
+			}
+		}
 
 	}
 }
